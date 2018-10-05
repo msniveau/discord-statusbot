@@ -1,0 +1,8 @@
+[discord]
+token = DISCORD_TOKEN_HERE
+
+[default:format]
+monitoring_offline = Server with tag {tag} is unreachable!
+monitoring_online = Server with tag {tag} is back online!
+status_offline = Server with tag {tag} is unreachable!
+status_online = Servername: {server_name}{break}Players: {player_count}/{max_players}
