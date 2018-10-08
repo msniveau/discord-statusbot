@@ -10,15 +10,16 @@ small python bot to monitor / query a gameserver via discord
 ## commands
 | **prefix**  | **syntax**                          | **example**                                     | **description**                                                                                                              |
 |-------------|-------------------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| !nick       | !nick <somenick>                    | !nick querybot                                  | sets the nickname of the bot                                                                                                 |
+| !nick       | !nick {somenick}                    | !nick querybot                                  | sets the nickname of the bot                                                                                                 |
 | !servers    | !servers                            | !servers                                        | print all available servers (tags)                                                                                           |
-| !status     | !status <tag>                       | !status mysrv                                   | prints the current server status (@formatting: status)                                                                       |
-|             | !status <tag> all                   | !status mysrv all                               | print all information about this gameserver                                                                                  |
-| !print      | !print <tag>                        | !print mysrv                                    | prints the current config of "mysrv"                                                                                         |
-| !monitoring | !monitoring <tag> <true/false>      | !monitoring mysrv true                          | enables / disables the monitoring of this server stauts, changes will be reported to the channel this command was executed in |
-| !format     | !format <type> <status> <format>    | !format status online servername: {server_name} | further details below                                                                                                        |
-| !addserver  | !addserver <tag> [game] <ip> <port> | !addserver myark arkse 123.123.213.123 27016    | add a gameserver                                                                                                             |
-| !delserver  | !delserver <tag>                    | !delserver myark                                | deletes a gameserver                                                                                                         |
+| !status     | !status {tag}                       | !status mysrv                                   | prints the current server status (@formatting: status)                                                                       |
+|             | !status {tag} all                   | !status mysrv all                               | print all information about this gameserver                                                                                  |
+| !print      | !print {tag}                        | !print mysrv                                    | prints the current config of "mysrv"                                                                                         |
+| !monitoring | !monitoring {tag} {true/false}      | !monitoring mysrv true                          | enables / disables the monitoring of this server stauts, changes will be reported to the channel this command was executed in |
+| !format     | !format {type} {status} {format}    | !format status online servername: {server_name} | further details below                                                                                                        |
+| !addserver  | !addserver {tag} [game] {ip} {port} | !addserver myark arkse 123.123.213.123 27016    | add a gameserver                                                                                                             |
+| !delserver  | !delserver {tag}                    | !delserver myark                                | deletes a gameserver                                                                                                         |
+                                                                                                   |
 
 ## formatting
 #### general information
