@@ -1,8 +1,7 @@
 # discord-statusbot
 small python bot to monitor / query a gameserver via discord
 
-
-[discordbots](https://discordbots.org/bot/496764374338240514)
+[![Discord Bots](https://discordbots.org/api/widget/496764374338240514.svg)](https://discordbots.org/bot/496764374338240514)
 
 [invite the hosted bot](https://discordapp.com/oauth2/authorize?client_id=496764374338240514&scope=bot&permissions=0)
 
