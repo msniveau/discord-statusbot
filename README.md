@@ -4,7 +4,7 @@ small python bot to monitor / query a gameserver via discord
 
 [discordbots](https://discordbots.org/bot/496764374338240514)
 
-[invite](https://discordapp.com/oauth2/authorize?client_id=496764374338240514&scope=bot&permissions=0)
+[invite the hosted bot](https://discordapp.com/oauth2/authorize?client_id=496764374338240514&scope=bot&permissions=0)
 
 # documentation
 ## commands
@@ -41,5 +41,3 @@ map = de_dust2
 you can just use the key as formatting variable. for example:
 
 `!format status online csgo The csgo named {server_name} is up and running on {map}!`
-
-fixed formatting variables are: {tag} and {break} - so for line breaks just use this variable
