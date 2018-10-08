@@ -3,6 +3,7 @@ small python bot to monitor / query a gameserver via discord
 
 
 [discordbots](https://discordbots.org/bot/496764374338240514)
+
 [invite](https://discordapp.com/oauth2/authorize?client_id=496764374338240514&scope=bot&permissions=0)
 
 # documentation
