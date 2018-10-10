@@ -29,6 +29,6 @@ def getClass(type):
 
 def handle( message):
     command='unknown'
-    if 0 in message.content.split():
+    if len(message.content.split()) > 0:
         command=message.content.split()[0]
     return getClass(command)(message)
