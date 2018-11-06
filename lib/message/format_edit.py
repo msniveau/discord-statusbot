@@ -6,7 +6,7 @@ class format_edit(base_message):
     validationRules = {
         1: '^(?i)(monitoring|status)$',
         2: '^(?i)(offline|online)$',
-        3: '^[a-z0-9]+$',
+        3: '^[a-zA-Z0-9]+$',
     }
     length = {
         'min': 4,
