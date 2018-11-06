@@ -2,7 +2,7 @@ from lib.message.base_message import base_message
 
 class set_nickname(base_message):
     validationRules = {
-        1: '^[a-z0-9-_~!+\.]+$'
+        1: '^[a-zA-Z0-9-_~!+\.]+$'
     }
     length = {
         'min': 1,
