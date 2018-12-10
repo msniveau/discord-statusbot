@@ -74,7 +74,7 @@ def monitoring_run(section, tag):
             print('[info  ] Monitoring status changed! (%s %s)' % (section, tag))
         try:
             yield from client.send_message(discord.Object(id=cfg.get(section, tag)), format_message(section, gs, game, False, True))
-        except discord.client.Forbidden:
+        except except (discord.client.Forbidden, discord.errors.NotFound):
             print('[error ] Monitoring wasn\'t able to send a message for (%s %s)' % (section, tag))
             yield from dict() 
 
