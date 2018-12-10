@@ -63,7 +63,7 @@ class parameter():
     def getMonitoringInterval(self):
         if not self.args.monitoring_interval:
             return 60
-        return self.args.monitoring_interval
+        return int(self.args.monitoring_interval)
 
     def isVerbose(self):
         return self.args.verbose != False or self.args.verbose_extended != False
