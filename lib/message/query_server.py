@@ -23,14 +23,24 @@ class query_server(base_message):
             tag=message_parts[1]
         p = parameter.getInstance()
         cfg = p.__config__
-        keyindex=tag + ':' + self.message.server.id
-        if not keyindex in cfg.sections():
-            raise DiscordError('No server with the tag "%s" found.' % (tag))
-        game = cfg.get(keyindex, 'game')
-        ip = cfg.get(keyindex, 'ip')
-        port = cfg.get(keyindex, 'port')
-        gs = queryli(game, ip, int(port))
-        printAll = False
-        if len(self.getMessageParts()) > 2:
-            printAll=True
-        yield from client.send_message(self.message.channel, format_message(self.message.server.id, gs, game, printAll, False))
+        tags = []
+        if tag == 'all':
+            for section in cfg.sections():
+                if section.endswith(':' + self.message.server.id):
+                    tags.append(section.split(':')[0])
+        else:
+            tags.append(tag)
+        message=''
+        for tag in tags:
+            keyindex=tag + ':' + self.message.server.id
+            if not keyindex in cfg.sections():
+                raise DiscordError('No server with the tag "%s" found.' % (tag))
+            game = cfg.get(keyindex, 'game')
+            ip = cfg.get(keyindex, 'ip')
+            port = cfg.get(keyindex, 'port')
+            gs = queryli(game, ip, int(port))
+            printAll = False
+            if len(self.getMessageParts()) > 2:
+                printAll=True
+            message+=format_message(self.message.server.id, gs, game, printAll, False)
+        yield from client.send_message(self.message.channel, message)
