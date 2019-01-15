@@ -6,6 +6,10 @@ small python bot to monitor / query a gameserver via discord
 [invite the hosted bot](https://discordapp.com/oauth2/authorize?client_id=496764374338240514&scope=bot&permissions=0)
 
 # documentation
+## setup via docker
+for setting up your own instance you may want to follow these [instructions](https://hub.docker.com/r/msniveau/discord-statusbot) for setting up the bot via docker
+
+
 ## commands
 | **prefix**  | **syntax**                          | **example**                                     | **description**                                                                                                              |
 |-------------|-------------------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
